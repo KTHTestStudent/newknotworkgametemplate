@@ -46,7 +46,7 @@ Each step has a gate; nothing moves on until the gate passes.
 | Genre and reference games | \[genre\]; \[2 or 3 references and what is taken from each\] |
 | Audience and session length | \[audience\]; \[minutes per session\], \[hours to finish\] |
 | Pillars | 1. \[pillar\] 2. \[pillar\] 3. \[pillar\] |
-| Cast | \[lead: Louis unless an exception is recorded in section 10\]; \[supporting cast\] |
+| Cast | \[lead\]; \[supporting cast\] |
 | Setting and tone | \[setting\]; \[tone\] |
 | Art direction and source | \[style\]; \[drawn by code / human artist / licensed, with source\] |
 | Audio direction | \[style\]; \[source, see section 7\] |
@@ -117,6 +117,7 @@ Disclosure line: `AI Disclosure: [game code by ...]. [Story and its ink by ...].
 
 | Asset or library | Source | Licence or permission | AI involvement |
 | --- | --- | --- | --- |
+| Knotwork | Kenton Howard, KTHTestStudent/knotworkprivateprealpha | MIT | See its own AI disclosure |
 | inkjs | inkle | MIT | None |
 | \[asset\] | \[source\] | \[licence\] | \[none / which model\] |
 
@@ -371,9 +372,13 @@ Every player action and every state change gets its feedback and its teaching in
 
 ```text
 index.html
-README.md            written by the human
+README.md            a stub; the human may rewrite it
 LICENSE
+LICENSE-INKJS.txt    inkjs's licence, as Knotwork ships it
 .gitignore
+.gitattributes
+CLAUDE.md            rules for Claude sessions
+TEMPLATE.md          what came with the template; the copied files and their sources
 GDD.md               this file
 HANDOFF.md           current state and next steps, for a fresh session
 disclosure.jsonc     Auto-Disclosure-Tool settings
@@ -381,12 +386,15 @@ disclosure.jsonc     Auto-Disclosure-Tool settings
 LOCAL-SUBAGENTS.md   runner files, copied from the runner's master copy
 run-local.sh
 run-phases.js
+phase-plan.example.txt
+dev/disclosure.js    Auto-Disclosure-Tool, an unedited copy
+ink/                 Knotwork's dialogue.js and inkjs; later config.js and the compiled story
 src/                 code only, no values
 data/                definitions (section 5)
 story/story.ink      stub knots, later the human's prose
 specs/PHASE-01.md    one spec per phase
 tests/
-tools/               validator, literal lint, bot simulation, zip script
+tools/               Knotwork's tools; later the validator, literal lint, bot simulation, zip script
 dist/                itch.io zip, ignored by git
 ```
 
@@ -522,4 +530,4 @@ Upload limits and embed options below are from itch.io's [Uploading HTML5 games]
 
 ### Open questions
 
-- [ ] &#91;question, and who answers it\]
+- [ ] \[question, and who answers it\]
