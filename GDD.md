@@ -522,4 +522,4 @@ Upload limits and embed options below are from itch.io's [Uploading HTML5 games]
 
 ### Open questions
 
-- [ ] &#91;question, and who answers it\]
+- [ ] \[question, and who answers it\]
