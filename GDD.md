@@ -46,7 +46,7 @@ Each step has a gate; nothing moves on until the gate passes.
 | Genre and reference games | \[genre\]; \[2 or 3 references and what is taken from each\] |
 | Audience and session length | \[audience\]; \[minutes per session\], \[hours to finish\] |
 | Pillars | 1. \[pillar\] 2. \[pillar\] 3. \[pillar\] |
-| Cast | \[lead: Louis unless an exception is recorded in section 10\]; \[supporting cast\] |
+| Cast | \[lead\]; \[supporting cast\] |
 | Setting and tone | \[setting\]; \[tone\] |
 | Art direction and source | \[style\]; \[drawn by code / human artist / licensed, with source\] |
 | Audio direction | \[style\]; \[source, see section 7\] |
@@ -371,7 +371,7 @@ Every player action and every state change gets its feedback and its teaching in
 
 ```text
 index.html
-README.md            written by the human
+README.md            a stub; the human may rewrite it
 LICENSE
 .gitignore
 GDD.md               this file
