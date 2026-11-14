@@ -1,0 +1,8 @@
+# Written by the local runner (run-local.sh, run-phases.js)
+.local-runs/
+prompts/
+node_modules/
+# The itch.io zip (GDD.md section 8)
+dist/
+# Claude Code's own settings on the laptop
+.claude/settings.local.json
