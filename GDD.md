@@ -117,6 +117,7 @@ Disclosure line: `AI Disclosure: [game code by ...]. [Story and its ink by ...].
 
 | Asset or library | Source | Licence or permission | AI involvement |
 | --- | --- | --- | --- |
+| Knotwork | Kenton Howard, KTHTestStudent/knotworkprivateprealpha | MIT | See its own AI disclosure |
 | inkjs | inkle | MIT | None |
 | \[asset\] | \[source\] | \[licence\] | \[none / which model\] |
 
@@ -373,7 +374,11 @@ Every player action and every state change gets its feedback and its teaching in
 index.html
 README.md            a stub; the human may rewrite it
 LICENSE
+LICENSE-INKJS.txt    inkjs's licence, as Knotwork ships it
 .gitignore
+.gitattributes
+CLAUDE.md            rules for Claude sessions
+TEMPLATE.md          what came with the template; the copied files and their sources
 GDD.md               this file
 HANDOFF.md           current state and next steps, for a fresh session
 disclosure.jsonc     Auto-Disclosure-Tool settings
@@ -381,12 +386,15 @@ disclosure.jsonc     Auto-Disclosure-Tool settings
 LOCAL-SUBAGENTS.md   runner files, copied from the runner's master copy
 run-local.sh
 run-phases.js
+phase-plan.example.txt
+dev/disclosure.js    Auto-Disclosure-Tool, an unedited copy
+ink/                 Knotwork's dialogue.js and inkjs; later config.js and the compiled story
 src/                 code only, no values
 data/                definitions (section 5)
 story/story.ink      stub knots, later the human's prose
 specs/PHASE-01.md    one spec per phase
 tests/
-tools/               validator, literal lint, bot simulation, zip script
+tools/               Knotwork's tools; later the validator, literal lint, bot simulation, zip script
 dist/                itch.io zip, ignored by git
 ```
 
