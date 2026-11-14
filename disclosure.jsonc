@@ -1,0 +1,49 @@
+// AI disclosure settings for dev/disclosure.js (Auto-Disclosure-Tool).
+// Run from the project's folder: node dev/disclosure.js
+// The line's words are the author's: the same shape as the
+// Auto-Disclosure-Tool's own line, so the tool can read it (full model
+// names joined by commas and "and"; no grouped names).
+{
+  // The game's own code (GDD.md section 8, file tree). Not counted: the
+  // copied files (Knotwork's ink/dialogue.js, ink/ink.js and its tools, the
+  // runner, dev/disclosure.js) and the empty folders' .gitkeep files.
+  "code": [
+    "index.html", "src", "data", "tests", "tools", "ink/config.js",
+    ":(exclude)tools/ink-full.js", ":(exclude)tools/inkc.js",
+    ":(exclude)tools/knotcheck.html", ":(exclude)tools/knotcheck.js",
+    ":(exclude)tools/pack.html", ":(exclude)tools/pack.js",
+    ":(exclude)tools/testfolder.js", ":(exclude)tools/viewer.html",
+    ":(exclude,glob)**/.gitkeep"
+  ],
+
+  // Definitions (GDD.md section 5): a commit with no model named that
+  // changes only these is the author's own tuning - listed, never a failure.
+  "handEdits": ["data"],
+
+  // The story: counted apart, never credited.
+  "story": ["story/story.ink", "ink/story.js"],
+
+  "line": {
+    "prefix": "AI Disclosure: code by",
+    // The files that hold the line, the model list on ONE line in each.
+    // Add the title screen's file here once it exists (GDD.md section 2).
+    "files": ["README.md"],
+    // Claude models only; any other name is the author's to add.
+    "autoAdd": "^Claude ",
+    "autoAddWhy": "Claude models only, as in the Auto-Disclosure-Tool's own settings"
+  },
+
+  "human": {
+    "lines": ["Design and decisions by Kenton Howard."]
+  },
+
+  // The laptop's local models (LOCAL-SUBAGENTS.md). "ids": the ID column of
+  // `ollama list` for builder:latest and fixer:latest. These two are the ids
+  // in the Auto-Disclosure-Tool's own settings (2026-10-19); check them on
+  // the laptop before the first batch - a commit stamped with an id that
+  // isn't here fails the check until the author says which model it is.
+  "local": [
+    { "role": "fixer", "name": "Qwen 3.8", "subject": "^phase \\d+: fixer|fixer try", "askFirst": true, "ids": ["3237d5585563"] },
+    { "role": "builder", "name": "Qwen 3.6", "subject": "^phase \\d+: builder|written by the local builder", "ids": ["2167ff73fd1a"] }
+  ]
+}
